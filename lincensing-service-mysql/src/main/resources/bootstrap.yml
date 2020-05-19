@@ -1,0 +1,10 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: licensingservicemysql
+  cloud:
+    config:
+      profile: default
+      uri: http://localhost:8888
+      name: licensingservicemysql

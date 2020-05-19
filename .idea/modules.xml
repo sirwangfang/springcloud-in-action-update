@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/confsvr/confsvr.iml" filepath="$PROJECT_DIR$/confsvr/confsvr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekaclient/eurekaclient.iml" filepath="$PROJECT_DIR$/eurekaclient/eurekaclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eurekasvr/eurekasvr.iml" filepath="$PROJECT_DIR$/eurekasvr/eurekasvr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/licensing-service/licensing-service.iml" filepath="$PROJECT_DIR$/licensing-service/licensing-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lincensing-service-mysql/lincensing-service-mysql.iml" filepath="$PROJECT_DIR$/lincensing-service-mysql/lincensing-service-mysql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloudinactionupdate.iml" filepath="$PROJECT_DIR$/springcloudinactionupdate.iml" />
+    </modules>
+  </component>
+</project>

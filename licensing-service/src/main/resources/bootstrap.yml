@@ -1,0 +1,12 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: licensingservice
+  cloud:
+    config: #Config客户端配置
+      profile: dev
+      uri: http://localhost:8888/
+      name: licensingservice
+
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fang.lincensingservicemysql.dao.LicenseDao">
+    <sql id="Base_Column_List">
+        license_id,organization_id,license_type,product_name,license_max,license_allocated,comment
+    </sql>
+    <resultMap id="lincenseResultMap" type="com.fang.lincensingservicemysql.model.License">
+        <id property="licenseId" column="license_id" />
+        <id property="organizationId" column="organization_id" />
+        <id property="licenseType" column="license_type" />
+        <id property="productName" column="product_name" />
+        <id property="licenseMax" column="license_max" />
+        <id property="licenseAllocated" column="license_allocated"/>
+        <id property="comment" column="comment" />
+        <result property="licenseId" column="license_id" />
+        <result property="organizationId" column="organization_id" />
+        <result property="licenseType" column="license_type" />
+        <result property="productName" column="product_name" />
+        <result property="licenseMax" column="license_max" />
+        <result property="licenseAllocated" column="license_allocated"/>
+        <result property="comment" column="comment" />
+    </resultMap>
+
+    <select id="findByOrganizationId" resultMap="lincenseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM LICENSES WHERE 1 = 1
+        <if test="organizationId != null and organizationId != '' "/>
+        AND organization_Id = #{organizationId}
+    </select>
+
+    <select id="findByOrganizationIdAndLicenseId" resultMap="lincenseResultMap">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM LICENSES WHERE 1 = 1
+        <if test="organizationId != null and organizationId != '' "/>
+        AND organizationId = #{organizationId}
+        <if test="licenseId != null and licenseId != '' "/>
+        AND licenseId = #{licenseId}
+    </select>
+</mapper>

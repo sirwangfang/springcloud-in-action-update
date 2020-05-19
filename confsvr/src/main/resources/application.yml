@@ -1,0 +1,31 @@
+
+#spring:
+#  application:
+#    name: configserver
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/sirwangfang/repo.git
+#          username: sirwangfang
+#          clone-on-start: true
+#          password: wang200908
+#          search-paths: licensingservice,organizationservice,zuulservice,licesingservicemysql
+#server:
+#  port: 8888
+
+#本地启动
+server:
+   port: 8888
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: native
+  cloud:
+     config:
+       server:
+           native:
+            search-locations: classpath:config/organizationservice,classpath:config/licensingservice,classpath:config/licensingservicemysql
+           encrypt:
+             enabled: false
